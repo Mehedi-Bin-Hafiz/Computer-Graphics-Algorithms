@@ -7,17 +7,18 @@ def customround(M):
         M = math.ceil(M)
     else:
         M = round(M)
-    return M
+    return float(M)
 
 
 def DDA(x0,y0,x1,y1):
+    x1 = float(x1)
+    y1 = float(y1)
     gx1=list()
     gy1=list()
     cordination=list()
-    xn=x0
-    yn=y0
+    xn= float(x0)
+    yn= float(y0)
     m = (y1-y0)/(x1-x0)
-    print(m)
     m =round(m,2)
 
     print("The value of m is= ",m)
@@ -37,6 +38,13 @@ def DDA(x0,y0,x1,y1):
             else:
                 continue
     elif( -1<= m and m <= 0):
+        if(x0>x1 and y0>y1):
+            temp=xn
+            xn=x1
+            x1=temp
+            temp2=yn
+            yn=y1
+            y1=temp2
         gx1.append(xn)
         gy1.append(yn)
         cordination.append((customround(xn), customround(yn)))
@@ -47,7 +55,7 @@ def DDA(x0,y0,x1,y1):
             gy1.append(yn)
             cordination.append((customround(xn), customround(yn)))
             x0, y0 = xn, yn
-            if xn == x1:
+            if xn == x1 or yn == y1:
                 break
             else:
                 continue
@@ -68,6 +76,13 @@ def DDA(x0,y0,x1,y1):
                 continue
 
     elif(m < -1):
+        if (x0 > x1 and y0 > y1):
+            temp = xn
+            xn = x1
+            x1 = temp
+            temp2 = yn
+            yn = y1
+            y1 = temp2
         gx1.append(xn)
         gy1.append(yn)
         cordination.append((customround(xn), customround(yn)))
@@ -78,7 +93,7 @@ def DDA(x0,y0,x1,y1):
             gy1.append(y)
             cordination.append((customround(x), customround(y)))
             x0, y0 = x, y
-            if x == x1:
+            if xn == x1 or yn == y1:
                 break
             else:
                 continue
@@ -86,11 +101,10 @@ def DDA(x0,y0,x1,y1):
 
 
 
-xnew1,ynew1, Ncordination = DDA(15,27,26,33)
-print("x1         y1         (x1,y1)")
-for i in range(0,len(xnew1)):
-    print("{:.2f}  -> {:>.2f} ->    {}".format(xnew1[i], ynew1[i],Ncordination[i]))
-xnew1,ynew1, Ncordination = DDA(32,16,37,26)
+xnew1,ynew1, Ncordination = DDA(15,5,5,10)
+# xnew1,ynew1, Ncordination = DDA(15,27,26,33)
+
+
 print("x1         y1         (x1,y1)")
 for i in range(0,len(xnew1)):
     print("{:.2f}  -> {:>.2f} ->    {}".format(xnew1[i], ynew1[i],Ncordination[i]))
