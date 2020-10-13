@@ -100,9 +100,10 @@ def DDA(x0,y0,x1,y1):
     return gx1, gy1, cordination
 
 
-
+""" x0,y0,x1,y1 """
+#xnew1,ynew1, Ncordination = DDA(15,27,26,33)
+#xnew1,ynew1, Ncordination = DDA(32,16,37,26)
 xnew1,ynew1, Ncordination = DDA(15,5,5,10)
-# xnew1,ynew1, Ncordination = DDA(15,27,26,33)
 
 
 print("x1         y1         (x1,y1)")
