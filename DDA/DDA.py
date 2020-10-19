@@ -119,7 +119,7 @@ def DDA(x0, y0, x1, y1):
     return gx1, gy1, cordination
 
 
-x1, y1, x2, y2 = -5,-10,5,0
+x1, y1, x2, y2 = 15, 27, 26, 33
 # low, high = 0, 0
 if(x2 - x1 < 0):
     low = x2
