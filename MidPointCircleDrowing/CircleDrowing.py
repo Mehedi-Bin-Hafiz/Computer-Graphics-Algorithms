@@ -27,17 +27,17 @@ print('k      p\t    Xk+1  Yk+1\t   (x, y)')
 while True:
 
     if p0 < 0:
+        print('{:<3}    {:<5}     {:}     {:}     ({},{})'.format(k, p0, x+1 , y, x + cx+1, y + cy))
         p0 = p0 + 2 * x + 3
         x += 1
         y = y
-        print('{:<3}    {:<5}     {:}     {:}     ({},{})'.format(k, p0, x , y, x + cx, y + cy))
 
 
     elif p0 >= 0:
+        print('{:<3}    {:<5}     {:}     {:}     ({},{})'.format(k, p0, x+1, y-1, x + cx+1, y + cy-1))
         p0 = p0 + (2 * x + 5) - (2 * y)
         x += 1
         y -= 1
-        print('{:<3}    {:<5}     {:}     {:}     ({},{})'.format(k, p0, x, y, x + cx, y + cy))
 
     k += 1
     if x >= y:

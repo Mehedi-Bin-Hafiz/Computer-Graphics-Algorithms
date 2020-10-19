@@ -18,51 +18,45 @@ def algorithm():
     #######Fixed######
 
     ###### Center value (if given then change) ######
-    cx = 5
-    cy = 8
+    cx = 8
+    cy = 5
     cordination = list()
     while True:
 
         if p0 < 0:
+            cordination.append([x + cx + 1, y + cy])
             p0 = p0 + 2 * x + 3
             x += 1
             y = y
-            cordination.append([x + cx, y + cy])
 
 
         elif p0 >= 0:
+            cordination.append([x + cx + 1, y + cy - 1])
             p0 = p0 + (2 * x + 5) - (2 * y)
             x += 1
             y -= 1
-            cordination.append([x + cx, y + cy])
-
         k += 1
         if x >= y:
             break
     return cordination
 
 
-# algo = algorithm()
-# glBegin(GL_QUADS)
-# for i in algo:
-#     print(i[0], i[1])
-# glEnd()
-
 def display():
     algo = algorithm()
     print(algo)
-    glBegin(GL_QUADS)
+
     glColor3f(1.0, 1.0, 1.0)
+    glBegin(GL_POINTS)
     for i in algo:
-        print(i[0], i[1])
         glVertex2f(i[0], i[1])
     glEnd()
 
+
 def iterate():
-    glViewport(0, 0, 500, 500)
+    glViewport(0, 0, 600, 600)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0, 500, 0.0, 500, 10, -10)
+    glOrtho(0.0, 50, 0.0, 50, 0.0, 1.0)
     glMatrixMode (GL_MODELVIEW)
     glLoadIdentity()
 

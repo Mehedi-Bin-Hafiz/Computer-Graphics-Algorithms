@@ -131,7 +131,7 @@ def algorithm():
 
 def display():
     algo = algorithm()
-    glBegin(GL_QUADS)
+    glBegin(GL_POINTS)
     glColor3f(1, 1, 1)
     for i in algo:
         glVertex2f(i[0], i[1])
@@ -141,7 +141,7 @@ def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0,300 , 0.0, 300, 0.0, 1.0)
+    glOrtho(0.0,500 , 0.0, 500, 0.0, 1.0)
     glMatrixMode (GL_MODELVIEW)
     glLoadIdentity()
 
