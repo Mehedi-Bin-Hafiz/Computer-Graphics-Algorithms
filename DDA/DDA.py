@@ -11,10 +11,10 @@ def customround(M):
 
 def fuckYouReality(x):
     if x < low:
-        print('fuck low', low)
+        # print('fuck low', low)
         return True
     elif x > high:
-        print('fuck high', high)
+        # print('fuck high', high)
         return True
 
 
@@ -94,9 +94,8 @@ def DDA(x0, y0, x1, y1):
 
     elif(m < -1):
         xT = x0 - (1 / m)
-        print(xT)
-        print(x1)
-        time.sleep(.2)
+        # print(xT)
+        # print(x1)
         if fuckYouReality(xT):  # asdasdasdadasdasdas
             x0, x1, xn = x1, x0, x1
             y0, y1, yn = y1, y0, y1
@@ -106,8 +105,8 @@ def DDA(x0, y0, x1, y1):
         while True:
             x = x0 - (1 / m)
             y = y0 - 1
-            print(x, y)
-            time.sleep(.5)
+            # print(x, y)
+            # time.sleep(.5)
             gx1.append(x)
             gy1.append(y)
             cordination.append((customround(x), customround(y)))
@@ -119,7 +118,7 @@ def DDA(x0, y0, x1, y1):
     return gx1, gy1, cordination
 
 
-x1, y1, x2, y2 = 15, 27, 26, 33
+x1, y1, x2, y2 = 80, 320, 200, 30
 # low, high = 0, 0
 if(x2 - x1 < 0):
     low = x2
