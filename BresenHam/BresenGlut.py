@@ -3,7 +3,7 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
 def algorithm():
-    x1, y1, x2, y2 = 80, 320, 200, 30
+    x1, y1, x2, y2 = -8,-4,0,0
     cordinates = list()
     if(x2 - x1 <= 0):
         x1, x2 = x2, x1
@@ -42,7 +42,7 @@ def iterate():
     glViewport(0, 0, 500, 500)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0, 500, 0.0, 500, 0.0, 1.0)
+    glOrtho(0.0, -50, 0.0, -50, 0.0, 1.0)
     glMatrixMode (GL_MODELVIEW)
     glLoadIdentity()
 
