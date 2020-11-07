@@ -128,7 +128,7 @@ else:
     low = x1
     high = x2
 
-xnew1,ynew1, Ncordination = DDA(x1, y1, x2, y2)
+xnew1, ynew1, Ncordination = DDA(x1, y1, x2, y2)
 # xnew1,ynew1, Ncordination = DDA(15,27,26,33)
 
 print("x1         y1         (x1,y1)")
