@@ -5,7 +5,10 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+<<<<<<< HEAD
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
+=======
+>>>>>>> 1a8c7244ebd14e39ae579acfed83774922b54594
 </module>
