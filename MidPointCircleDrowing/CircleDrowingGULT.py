@@ -4,7 +4,7 @@ from OpenGL.GLU import *
 
 def algorithm():
     """ input r all time """
-    r = 16
+    r = 11
     if isinstance(r, float):
         p0 = (5 / 4) - r
     else:
@@ -18,8 +18,8 @@ def algorithm():
     #######Fixed######
 
     ###### Center value (if given then change) ######
-    cx = 8
-    cy = 5
+    cx = -5
+    cy = 7
     cordination = list()
     while True:
 
@@ -56,7 +56,7 @@ def iterate():
     glViewport(0, 0, 600, 600)
     glMatrixMode(GL_PROJECTION)
     glLoadIdentity()
-    glOrtho(0.0, 50, 0.0, 50, 0.0, 1.0)
+    glOrtho(-25, 50, -25, 50, 0.0, 1.0)
     glMatrixMode (GL_MODELVIEW)
     glLoadIdentity()
 
