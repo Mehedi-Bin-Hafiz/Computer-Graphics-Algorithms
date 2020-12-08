@@ -1,8 +1,11 @@
 import math as m
 from termcolor import colored
 
-x = [3, 6, 2, 7]  #.....................
-y = [4, 4, 1, 1]  #.....................
+x = [p*2 for p in [4, 6, 4, 6] ] #.....................
+y = [p*2 for p in [9, 9, 11, 11] ]
+# x = [p*2 for p in [5, 7, 5, 7] ] #.....................
+# y = [p*2 for p in [6, 6, 8, 8] ]  #.....................
+print(x,y)
 xP = []
 yP = []
 Len = len(x)
@@ -59,8 +62,8 @@ for i in range(Len):
     print("({},{})".format(x[i], y[i]), end=' ')
 print()
 
-theta = 30  #.....................
-C_W = 0     # 1 if clock wise 0 if anti clock wise
+theta = m.radians(30)  #.....................
+C_W = 1     # 1 if clock wise 0 if anti clock wise
 xP = []
 yP = []
 
@@ -70,6 +73,8 @@ else:
     print(colored("                                      anti clock wise", 'red'))
 for i in range(Len):
     if C_W:
+        # print(m.cos(theta))
+        # print(m.sin(theta))
         xP.append(
             x[i] * m.cos(theta) + y[i] * m.sin(theta)
         )
@@ -102,8 +107,8 @@ for i in range(Len):
     print("({},{})".format(x[i], y[i]), end=' ')
 print()
 
-sx = .5  #.....................
-sy = .5  #.....................
+sx = 2  #.....................
+sy = 2  #.....................
 xP = []
 yP = []
 for i in range(Len):

@@ -1,6 +1,6 @@
 
 """ input r all time """
-r = 16
+r = 6
 if isinstance(r, float):
     p0 = (5/4) - r
 else:
@@ -15,8 +15,8 @@ k = 0
 #######Fixed######
 
 ###### Center value (if given then change) ######
-cx = 5
-cy = 8
+cx = 2
+cy = 9
 
 
 print('=========== Co-ords Values============')
