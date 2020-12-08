@@ -1,6 +1,10 @@
 
 """ input r all time """
+<<<<<<< HEAD
 r = 6
+=======
+r = 11
+>>>>>>> 6682067cbf8c0d484d1d4a3d58bf9e097a77a813
 if isinstance(r, float):
     p0 = (5/4) - r
 else:
@@ -15,8 +19,13 @@ k = 0
 #######Fixed######
 
 ###### Center value (if given then change) ######
+<<<<<<< HEAD
 cx = 2
 cy = 9
+=======
+cx = -5
+cy = 7
+>>>>>>> 6682067cbf8c0d484d1d4a3d58bf9e097a77a813
 
 
 print('=========== Co-ords Values============')
